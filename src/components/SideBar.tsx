@@ -17,7 +17,7 @@ export default function SideBar() {
   }, [location]);
 
   return (
-    <div className="h-screen fixed flex">
+    <div className="h-screen flex">
       {isSidebarOpen && (
         <div className="w-[300px] relative bg-orange_primary flex flex-col items-center">
           {/* <div className="absolute right-2 top-2">
@@ -45,7 +45,7 @@ export default function SideBar() {
                 </Link>
                 <Link
                   className={`p-4 w-full cursor-pointer rounded-l-2xl transition duration-150 hover:bg-orange_light hover:text-dark_gray ${
-                    activeLink === "/posts"
+                    activeLink.includes("posts")
                       ? "bg-orange_light text-dark_gray"
                       : "text-white"
                   }`}

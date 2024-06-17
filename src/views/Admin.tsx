@@ -18,7 +18,10 @@ export default function Admin() {
     { name: "Katiana", email: "email@gmail.com" },
     { name: "Katiana", email: "email@gmail.com" },
     { name: "Katiana", email: "email@gmail.com" },
-    { name: "Katiana", email: "email@gmail.com" },
+    {
+      name: "Katiana",
+      email: "email@gmail.com",
+    },
     { name: "Katiana", email: "email@gmail.com" },
     { name: "Katiana", email: "email@gmail.com" },
     { name: "Katiana", email: "email@gmail.com" },
@@ -37,9 +40,9 @@ export default function Admin() {
     <div className="bg-orange_light flex">
       <div className="bg-orange_light flex w-full h-screen">
         <SideBar />
-        <div className="w-full max-w-[1500px] ml-80 p-10 flex flex-col">
+        <div className="w-full p-10 flex flex-col">
           <h1 className="text-3xl font-bold mb-4">Usuários</h1>
-          <div className="overflow-x-auto overflow-y-auto max-w-full">
+          <div className=" overflow-y-auto max-w-full">
             <table className="min-w-full bg-white rounded-lg overflow-hidden shadow-lg">
               <thead className="">
                 <tr className="bg-orange_primary text-left text-lg">
@@ -57,8 +60,12 @@ export default function Admin() {
                       index % 2 === 0 ? "bg-orange_light" : "bg-white"
                     }`}
                   >
-                    <td className="py-3 px-4">{user.name}</td>
-                    <td className="py-3 px-4">{user.email}</td>
+                    <td className="py-3 px-4 break-words max-w-32">
+                      {user.name}
+                    </td>
+                    <td className="py-3 px-4 break-words max-w-32">
+                      {user.email}
+                    </td>
                     <td className="py-3 px-4 flex space-x-2">
                       <FaUser className="text-gray-600" />
                       <FaEdit className="text-gray-600" />

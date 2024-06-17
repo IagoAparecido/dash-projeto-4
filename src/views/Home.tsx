@@ -39,7 +39,7 @@ export default function Home() {
   return (
     <div className="bg-orange_light flex w-full h-screen">
       <SideBar />
-      <div className="w-full max-w-[1500px] ml-80 p-10 flex flex-col">
+      <div className="w-full p-10 flex flex-col">
         <h1 className="text-3xl font-bold mb-4">Usuários</h1>
         <div className="overflow-x-auto overflow-y-auto max-w-full">
           <table className="min-w-full bg-white rounded-lg overflow-hidden shadow-lg">
@@ -59,9 +59,15 @@ export default function Home() {
                     index % 2 === 0 ? "bg-orange_light" : "bg-white"
                   }`}
                 >
-                  <td className="py-3 px-4">{user.name}</td>
-                  <td className="py-3 px-4">{user.email}</td>
-                  <td className="py-3 px-4">{user.posts}</td>
+                  <td className="py-3 px-4 break-words max-w-32">
+                    {user.name}
+                  </td>
+                  <td className="py-3 px-4 break-words max-w-32">
+                    {user.email}
+                  </td>
+                  <td className="py-3 px-4 break-words max-w-32">
+                    {user.posts}
+                  </td>
                   <td className="py-3 px-4 flex space-x-2">
                     <FaUser className="text-gray-600" />
                     <FaEdit className="text-gray-600" />

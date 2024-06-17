@@ -7,6 +7,7 @@ import Home from "./views/Home";
 import NotFound from "./views/NotFound";
 import Posts from "./views/Posts";
 import Admin from "./views/Admin";
+import PostDetails from "./views/PostDetails";
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
   {
     path: "/posts",
     element: <Posts />,
+  },
+  {
+    path: "/posts/:postId",
+    element: <PostDetails />,
   },
   {
     path: "/admin",
