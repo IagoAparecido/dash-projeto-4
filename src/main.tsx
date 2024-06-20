@@ -11,6 +11,7 @@ import PostDetails from "./views/PostDetails";
 import { AuthProvider } from "./context/AuthContext";
 import { ProtectedRoute } from "./routes/ProtectedRoute";
 import { PublicRoute } from "./routes/PublicRoute";
+import UserPosts from "./views/UserPosts";
 
 const router = createBrowserRouter([
   {
@@ -27,6 +28,14 @@ const router = createBrowserRouter([
     element: (
       <ProtectedRoute>
         <Home />
+      </ProtectedRoute>
+    ),
+  },
+  {
+    path: "/user/:userId",
+    element: (
+      <ProtectedRoute>
+        <UserPosts />
       </ProtectedRoute>
     ),
   },

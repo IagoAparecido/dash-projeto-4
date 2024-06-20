@@ -7,6 +7,7 @@ import { FormatDate } from "../utils/FormatDate";
 import { MdBlock } from "react-icons/md";
 import { IoIosWarning } from "react-icons/io";
 import { BiCheck } from "react-icons/bi";
+import { useNavigate } from "react-router-dom";
 
 interface DataUsersTypes {
   email: string;
@@ -17,6 +18,7 @@ interface DataUsersTypes {
 }
 
 export default function Home() {
+  const navigate = useNavigate();
   const [currentPage, setCurrentPage] = useState(0);
   const [data, setData] = useState<DataUsersTypes[]>([]);
   const [loadingPage, setLoadingPage] = useState<boolean>(true);
@@ -26,7 +28,6 @@ export default function Home() {
   const [idUser, setIdUser] = useState<string>("");
   const [nameUser, setNameUser] = useState<string>("");
   const [statusUser, setStatusUser] = useState<string>("");
-  console.log(data);
 
   const usersPerPage = 10;
   const offset = currentPage * usersPerPage;
@@ -37,7 +38,7 @@ export default function Home() {
 
   const fetchUsers = async () => {
     try {
-      const response = await fetch(`${api}/users/admin`, {
+      const response = await fetch(`${api}/users`, {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -160,6 +161,7 @@ export default function Home() {
                   </td>
                   <td className="py-3 px-4 flex space-x-2">
                     <FaUser
+                      onClick={() => navigate(`/user/${user.id}`)}
                       size={18}
                       className="text-gray-600 cursor-pointer"
                     />

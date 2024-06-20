@@ -59,7 +59,7 @@ export default function Posts() {
     <div className="bg-orange_light flex w-full h-screen">
       <SideBar />
       <div className="w-full  p-10 flex flex-col">
-        <h1 className="text-3xl font-bold mb-4">Usuários</h1>
+        <h1 className="text-3xl font-bold mb-4">Posts</h1>
         <div className="overflow-x-auto overflow-y-auto max-w-full flex flex-col gap-2">
           {loading && (
             <div className="flex justify-center rounded-lg">

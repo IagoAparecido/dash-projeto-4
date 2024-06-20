@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { IoMdExit, IoMdClose, IoMdMenu } from "react-icons/io";
-import "../App.css"; // Import the custom CSS for animations
+import "../App.css";
 import { useAuth } from "../context/AuthContext";
 import { FaUser } from "react-icons/fa";
 
@@ -45,7 +45,7 @@ export default function SideBar() {
               <div className="flex flex-col gap-2 w-full text-lg">
                 <Link
                   className={`p-4 w-full cursor-pointer rounded-l-2xl transition duration-150 hover:bg-orange_light hover:text-dark_gray ${
-                    activeLink === "/home"
+                    activeLink.includes("home") || activeLink.includes("user")
                       ? "bg-orange_light text-dark_gray"
                       : "text-white"
                   }`}
