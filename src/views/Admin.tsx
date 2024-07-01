@@ -197,7 +197,7 @@ export default function Admin() {
           <div className="flex justify-between items-center">
             <h1 className="text-3xl font-bold mb-4">Usuários Admin</h1>
             <button
-              className="bg-orange_primary flex justify-center items-center gap-2 px-2 py-1 rounded-md hover:opacity-90"
+              className="bg-orange_primary flex justify-center items-center gap-2 px-2 h-[40px] rounded-md hover:opacity-90"
               onClick={() => setShowModal(true)}
             >
               <MdPersonAddAlt1 size={22} /> Adicionar usuário
@@ -235,7 +235,7 @@ export default function Admin() {
                           <div className="flex flex-col">
                             <label className="text-sm">Nome</label>
                             <input
-                              className="bg-orange_light p-2 rounded"
+                              className="bg-orange_light pl-2 h-[45px] outline-none rounded"
                               type="text"
                               placeholder="Digite o nome"
                               required
@@ -246,7 +246,7 @@ export default function Admin() {
                           <div className="flex flex-col">
                             <label className="text-sm">E-mail</label>
                             <input
-                              className="bg-orange_light p-2 rounded"
+                              className="bg-orange_light pl-2 h-[45px] outline-none rounded"
                               type="email"
                               placeholder="Digite o e-mail"
                               required
@@ -257,7 +257,7 @@ export default function Admin() {
                           <div className="flex flex-col ">
                             <label className="text-sm">Senha</label>
                             <input
-                              className="bg-orange_light p-2 rounded"
+                              className="bg-orange_light pl-2 h-[45px] outline-none rounded"
                               type="password"
                               placeholder="Digite a senha"
                               required
@@ -270,7 +270,7 @@ export default function Admin() {
                             <input
                               type="password"
                               placeholder="Confirmar senha"
-                              className="bg-orange_light p-2 rounded"
+                              className="bg-orange_light pl-2 h-[45px] outline-none rounded"
                               required
                               value={confirmPassword}
                               onChange={(e) =>
@@ -279,17 +279,17 @@ export default function Admin() {
                             />
                           </div>
                           {error && (
-                            <span className="bg-red-600 rounded p-2 text-center flex justify-center items-center gap-2 text-base text-white">
+                            <span className="bg-red-600 rounded pl-2 h-[45px] text-center flex justify-center items-center gap-2 text-base text-white">
                               <IoIosWarning size={22} /> {error}
                             </span>
                           )}
                           {success && (
-                            <span className="bg-green-600 rounded p-2 text-center flex justify-center items-center gap-2 text-base text-white">
+                            <span className="bg-green-600 rounded pl-2 h-[45px] text-center flex justify-center items-center gap-2 text-base text-white">
                               {success}
                             </span>
                           )}
                           <button
-                            className="bg-orange_primary justify-center flex mt-2 text-white font-bold uppercase text-sm px-6 py-3 rounded shadow hover:opacity-90 outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                            className="bg-orange_primary justify-center flex mt-2 text-white font-bold uppercase text-sm px-6 pl-2 h-[45px] items-center rounded shadow hover:opacity-90 outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                             type="submit"
                             disabled={loading}
                           >
@@ -337,7 +337,7 @@ export default function Admin() {
                           <div className="flex flex-col">
                             <label className="text-sm">Nome</label>
                             <input
-                              className="bg-orange_light p-2 rounded"
+                              className="bg-orange_light pl-2 h-[45px] outline-none rounded"
                               type="text"
                               placeholder="Digite o nome"
                               required
@@ -349,7 +349,7 @@ export default function Admin() {
                             <label className="text-sm">E-mail</label>
                             <input
                               disabled
-                              className="bg-orange_light p-2 rounded"
+                              className="bg-orange_light pl-2 h-[45px] outline-none rounded"
                               type="email"
                               placeholder="Digite o e-mail"
                               required
@@ -359,7 +359,7 @@ export default function Admin() {
                           <div className="flex flex-col ">
                             <label className="text-sm">Senha</label>
                             <input
-                              className="bg-orange_light p-2 rounded"
+                              className="bg-orange_light pl-2 h-[45px] outline-none rounded"
                               type="password"
                               placeholder="******"
                               required
@@ -371,7 +371,7 @@ export default function Admin() {
                             <input
                               type="password"
                               placeholder="******"
-                              className="bg-orange_light p-2 rounded"
+                              className="bg-orange_light pl-2 h-[45px] outline-none rounded"
                               required
                               onChange={(e) =>
                                 setEditConfirmPassword(e.target.value)
@@ -379,17 +379,17 @@ export default function Admin() {
                             />
                           </div>
                           {error && (
-                            <span className="bg-red-600 rounded p-2 text-center flex justify-center items-center gap-2 text-base text-white">
+                            <span className="bg-red-600 rounded pl-2 h-[45px]  text-center flex justify-center items-center gap-2 text-base text-white">
                               <IoIosWarning size={22} /> {error}
                             </span>
                           )}
                           {success && (
-                            <span className="bg-green-600 rounded p-2 text-center flex justify-center items-center gap-2 text-base text-white">
+                            <span className="bg-green-600 rounded pl-2 h-[45px]  text-center flex justify-center items-center gap-2 text-base text-white">
                               {success}
                             </span>
                           )}
                           <button
-                            className="bg-orange_primary justify-center flex mt-2 text-white font-bold uppercase text-sm px-6 py-3 rounded shadow hover:opacity-90 outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                            className="bg-orange_primary justify-center flex mt-2 text-white font-bold uppercase text-sm px-6 h-[45px] items-center rounded shadow hover:opacity-90 outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                             type="submit"
                             disabled={loading}
                           >
@@ -408,15 +408,21 @@ export default function Admin() {
               </>
             )}
           </div>
-          <div className=" overflow-y-auto max-w-full">
+          <div className="mt-2 overflow-y-auto max-w-full">
             <table className="min-w-full bg-white rounded-lg overflow-hidden shadow-lg">
               <thead className="">
                 <tr className="bg-orange_primary text-left text-lg">
-                  <th className="py-3 px-4 font-semibold">Nome</th>
-                  <th className="py-3 px-4 font-semibold">Email</th>
-                  <th className="py-3 px-4 font-semibold">Data criação</th>
+                  <th className="py-3 px-4 font-semibold text-dark_gray">
+                    Nome
+                  </th>
+                  <th className="py-3 px-4 font-semibold text-dark_gray">
+                    Email
+                  </th>
+                  <th className="py-3 px-4 font-semibold text-dark_gray">
+                    Data criação
+                  </th>
 
-                  <th className="py-3 px-4 font-semibold ">Action</th>
+                  <th className="py-3 px-4 font-semibold"></th>
                 </tr>
               </thead>
 

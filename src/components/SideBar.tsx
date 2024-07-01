@@ -38,7 +38,7 @@ export default function SideBar() {
             />
           </div>
           <h2 className="h-52 text-center text-white text-xl flex items-center">
-            Logo
+            <img src="/logo.svg" alt="logo" className="w-20 h-20" />
           </h2>
           <div className="h-full w-full flex flex-col items-end">
             <div className="flex flex-col w-[90%] h-full justify-between items-center">

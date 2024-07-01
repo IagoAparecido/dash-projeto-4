@@ -130,7 +130,7 @@ export default function PostDetails() {
             {">"}
           </button>
         </div>
-        <div className="w-1/2 h-full max-h-[630px] flex flex-col justify-center gap-5 bg-white p-5">
+        <div className="w-1/2 h-full max-h-[630px] flex flex-col justify-center gap-5 bg-white px-10 py-5 ">
           <div className="flex gap-2 self-end mt-[-50px] mb-5">
             <p className="px-3 py-1 bg-orange_light text-orange_primary rounded-lg">
               {data!.type}
@@ -138,7 +138,7 @@ export default function PostDetails() {
             <p className="px-3 py-1 bg-orange_light text-orange_primary rounded-lg">
               {data!.age} Anos
             </p>
-            <p className="px-3 py-1 bg-orange_light text-orange_primary rounded-lg">
+            <p className="px-3 py-1 bg-orange_light text-orange_primary rounded-lg items-center justify-center flex">
               {data!.sex == "Macho" ? (
                 <BsGenderMale size={18} />
               ) : (
@@ -148,24 +148,26 @@ export default function PostDetails() {
           </div>
           <div className="flex flex-col gap-2">
             <h1 className="text-2xl font-semibold">{data!.name}</h1>
-            <h2 className="text-sm">
+            <h2 className="text-base font-medium font-roboto text-[#555555]">
               publicado em {FormatDate(data!.createdAt)}
             </h2>
-            <p className="text-base">{data!.description}</p>
-            <p className="text-lg">Postagem feita por {data!.name}</p>
+            <p className="text-lg text-[#6F6D6D] ">{data!.description}</p>
+            <p className="text-base font-medium font-roboto text-[#555555]">
+              postagem feita por {data!.name}
+            </p>
             <p className="flex items-center">
               <span className="text-orange_primary">
                 <FaLocationDot />
               </span>
-              <span className="ml-1">
-                {data!.city} | {data!.uf}
+              <span className="ml-1 text-[#555555]">
+                {data!.city} - {data!.uf}
               </span>
             </p>
           </div>
           <button
             disabled={loadingButton}
             onClick={() => handleDeletePosts()}
-            className="bg-[#A81E1E] flex justify-center hover:opacity-85 w-2/3 self-center mt-5 text-white p-2 rounded-lg"
+            className="bg-[#951919] flex justify-center hover:opacity-85 w-full self-center mt-5 text-white p-2 rounded-lg"
           >
             {loadingButton ? <div className="spinner"></div> : "Remover Post"}
           </button>
